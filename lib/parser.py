@@ -63,17 +63,17 @@ class Parser:
             self._save_document()
 
     def _replace_all(self, old, new):
-        self.paragraph_replace(
+        self._replace_tables(
             old=old,
             new=new,
             save=False)
 
-        self.table_replace(
+        self._replace_headings(
             old=old,
             new=new,
             save=False)
 
-        self.heading_replace(
+        self._replace_paragraphs(
             old=old,
             new=new,
             save=False)

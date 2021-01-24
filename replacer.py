@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import logging
 import argparse
 
 from lib.utils import *
@@ -17,6 +18,9 @@ def main():
     parser.add_argument(
         "--type", choices=REPLACE_TYPES,
         default=REPLACE_TYPES[0], help="Type of replacing needed. Defaults to all")
+
+    logger = logging.getLogger()
+    logger.setLevel(level=logging.INFO)
 
     args = parser.parse_args()
 
