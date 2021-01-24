@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import argparse
 
 from parser.parser import Parser
@@ -16,7 +15,6 @@ def main():
         "new", help="New value to replace with")
 
     args = parser.parse_args()
-    print(args)
 
     parser = Parser(file_path=args.file_path)
     parser.paragraph_replace(
