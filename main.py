@@ -21,7 +21,7 @@ def main():
     parser = Parser(file_path=args.file_path)
     parser.paragraph_replace(
         old=args.old,
-        news=args.new)
+        new=args.new)
 
 
 if __name__ == "__main__":
